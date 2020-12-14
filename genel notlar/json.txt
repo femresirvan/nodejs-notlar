@@ -1,0 +1,19 @@
+//JSON NEDİR?
+// key,value değerlerine sahip data modelidir
+// açılımı JavaScript Object Notation
+// xml e göre çok daha az yer kaplar ve daha hızlıdır.
+// javascript denilmesine rağmen javascript içerisinde json objesi üzerinde operasyon yapabilmek için js objesine dönüştürülmelidir.
+
+//JSON VERİ TÜRLERİ
+//STRING
+//NUMBER
+//BOOLEAN
+//NULL
+//ARRAY
+//OBJECT
+
+//not: veri yapıları içerisinde veri türlerini tutar
+
+//JSON VERİ YAPILARI
+//object
+//array

@@ -1,0 +1,49 @@
+const app = express(); bu şekilde express constructorını çağırıyoruz değişken olarak app'i atıyoruz
+
+!app.use methodu istek için bir ara katman oluşturur ve önce o işlem ele alınır
+!app.set set adından da anlaşılacağı üzere app'in ayarlar(settings)ını yapar
+
+app ile routing işlemleri
+!app ile routing işlemi yaparken app.all methodunu kullanırsak o path için bütün istek türleri aynı şekilde yanıtlanacak.
+örnek routing işlemleri
+app.get(ROUTE PATH,CALLBACK) // CALLBACK içerisindeki parametreler => req,res,next
+req -> istek objesi
+res -> yanıt objesi
+next -> yeni middleware methoduna geçiş
+
+ROUTE PATHS
+'/ab?cd' acd, abcd şeklinde bunların hepsi path olarak geçebilir
+örnek
+'/ab?c?d?' a abcd ad....
+'/ab+cd' abcd, abbcd, abbbcd
+'/ab*cd' abcd, abxcd, abRANDOMcd, ab123cd...
+'/ab(cd)?e' abe abcde.
+/a/ Bu rota yolu, içinde "a" bulunan herhangi bir şeyle eşleşecektir. dikkat edin tırnak kullanılmaz burada
+/.*fly$/ butterfly and dragonfly, but not butterflyman, dragonflyman,
+
+ROUTE PARAMETLERİ
+: ile belirtilen yerde kullanıcıdan veri alınır ve req.params objesi içerisinde saklanır
+
+Route path: /flights/:from-:to
+Request URL: http://localhost:3000/flights/LAX-SFO
+req.params: { "from": "LAX", "to": "SFO" }
+
+Route path: /plantae/:genus.:species
+Request URL: http://localhost:3000/plantae/Prunus.persica
+req.params: { "genus": "Prunus", "species": "persica" }
+
+REQ
+req.params objesi ile parametleri alabiliriz.
+req.body isteğin bodysine obje olarak erişebilirz
+
+RES
+res.send() http isteğini sonlandırır ve data gönderir
+res.sendFile() http isteğini sonlandırır ve dosya gönderir
+res.json() http isteğini sonlandırır ve json gönderir
+res.end() http isteğin sonlandırır
+detaylı bilgi response methods.png de
+
+middleware türleri express
+https://expressjs.com/en/guide/using-middleware.html
+
+joi,jwt

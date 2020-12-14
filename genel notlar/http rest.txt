@@ -1,0 +1,18 @@
+// İSTEKLER
+
+// get belirtilen resource ü almak için
+// put bir resource gönderilir ve o resoucre varsa silinip yenisi eklenir
+// post server da yeni bir resource oluşturur
+// delete resource silmek için
+// patch puta benzer fakat resource da kısmi bir güncelleme yapılacaksa 
+// options istek gönderdiğimiz uri'nin hangi methodları desteklediğini öğrenmek için bu bilgi bize header da allow olarak verilir
+
+// HTTP STATÜ KODLARI
+
+// 1. Bilgilendirme yanıtları (100-199),
+// 2. Başarı yanıtları (200-299),
+// 3. Yönlendirmeler (300-399),
+// 4. İstemci hataları (400-499) ve,
+// 5. Sunucu hataları (500-599).
+// kaynak https://developer.mozilla.org/tr/docs/Web/HTTP/Status
+
