@@ -3,8 +3,16 @@ Büyükten Küçüğe giderek MongoDB yapısı DB->COLLECTION->DOCUMENT->FIELD
 !mongodb de field'da _id olarak tutulan id'miz unique(spesific) olarak tanımlanır.
 !MongoDB'nin en temel veri tipi BSON'dır. 
 1. SQL ve NoSQL Farkları
-Buralar Gülbenin
 
+SQL => ilişkisel, tablo tabamlı
+veriler bir dizi satırdan oluşan tablo biçiminde, önceden tanımlanmış şema vardır
+hiyerarşik veri depolamaya uygun değildir
+karmaşık sorgular için kullanılabilir
+
+NOSQL => ilişkisel değil, belge tabanlı, 
+standart şema tanımı yoktur,dinamik şema vardır
+hiyerarşik veri depolamaya çok uygundur
+karmaşık sorgular için uygun değildir
 
 
 Temel MongoDB Cli Komutları
@@ -29,4 +37,37 @@ Schema -> (iskelet)Database'e kaydedeceğimiz dökümanın iskeletidir.
 schema -> schematype,schemaoptions
 
 schematype options
-1. ve 2. sayfa gülben yazıcak
+
+schematype options
+type => verinin türünü belirler
+lowercase => küçük harflere dönüştürür
+uppercase => büyük harflere dönüştürür
+required => zorunlu olup olmadığına bakar, boolean ya da function alır
+default => eğer girilmeyen değer varsa otomotik atama yapar
+validate => validation function eklemek için
+get => getterlık yapan fonksiyon sanaldır diye kaydedilmez
+set => setterlık yapan fonksiyon sanaldır diye kaydedilir
+alias => schmeda tanımlanan key için takma ad verir
+trim => sağdan ve soldan boşluk bırakmak için. boolean
+match => string değerin istenilen string ile sağlanıp sağlanmaması
+enum => dizi tanımlanabilir. buraya gelen değer tanımlanan değerlerden biri olmalıdır aksi takdirde kayıt yapılmaz
+minlength =>
+maxlength => 
+capped => collectiona gelen document sayısını sınırlar. byte cinsinden
+collection => spesifik olarak koleksiyon eklemek için
+id => id default olarak atayıp veya geçmeyeceğini belirler. eğer id olmazsa document mongodb ye kaydedilmez
+minimize => atanmayan değerlerin de db de gözükmesini sağlar
+
+number özellikleri
+min =>
+max =>
+enum => 
+
+date özellikleri
+min => 
+max => 
+
+index kullanımları
+index => spesifik aramalar için yardımcı 
+unique => bütün koleksiyonda bir tane olması için kullanılır. örneğin email pass
+

@@ -1,0 +1,26 @@
+Joi, bir nesnenin benzemesini beklediğimiz şema şemasını tanımlamak için kullanıllır.
+
+email() => e posta biçimi geçerli mi diye bakar
+greater() => en fazla
+less() => en az
+integer() => tam sayı mi diye bakar
+precision() => belirli sayıda ondalık basamak
+lowercase() => küçük harf mi
+uppercase() => büyük harf mi
+trim() => sağdan soldan boşlukları siler
+length() => olması gereken uzunluk (diziler için de kullanılabilir)
+min() => en az
+max() => en fazla
+timestamp() => unix timestamp2da bir zaman damgası aralığı ??
+sparse() => dizilerde tanımsız değerlere izin verir
+and() => keys'lerin arasında ilişki tanımlamak için
+nand() => keys'lerin listesini tanımlamak için ama hepsi birlikte olamaz
+or() => keys'lerden biri gerekliyse
+nor() => keys'lerin biri gerekli ama hepsi birlikte olamaz
+any() => herhangi bir veri türünü kabul eder
+ip() => ip adresinin formatını kontrol eder
+required() => gerekli olması durumunda
+string() => string türünde olması gerekir
+number() => number türünde olması gerekir
+optional() => isteğe bağlı olduğu durumunda
+alphanum() => a-z ve 0-9 arası değerler alabilir
