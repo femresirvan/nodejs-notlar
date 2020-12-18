@@ -1,0 +1,32 @@
+MongoDB ve NoSQL
+Büyükten Küçüğe giderek MongoDB yapısı DB->COLLECTION->DOCUMENT->FIELD
+!mongodb de field'da _id olarak tutulan id'miz unique(spesific) olarak tanımlanır.
+!MongoDB'nin en temel veri tipi BSON'dır. 
+1. SQL ve NoSQL Farkları
+Buralar Gülbenin
+
+
+
+Temel MongoDB Cli Komutları
+Sanal makinelerde bir mongodb sunucusu çalıştırmak istersek genellikle sanal makinelerin işletim sistemlerinin gui'ı olmadığı için.
+İşletim sisteminin bash'inde kullanabiliriz.
+
+show dbs -> databaseleri gösterir
+use db -> spesifik olarak isteğimiz db'e gider. eğer böyle bir database yoksa database'i oluşturup öyle gider.
+db. deyip taba basarsan kullanabileceğin bütün komutlar gösterilir.
+db.logout() db den çıkış yapar
+db.createCollection('koleksiyon') bulunduğumuz database'e koleksiyon adında bir collection kurar
+db.koleksiyon.insertOne({ad:"emre"}) koleksiyona bir emre adında document ekler.
+insertMany
+db.{koleksiyon ismi}.find() armaa
+
+!Robo3t mongoDB için görsel arayüz
+
+Mongoose Modülü
+ODML -> Object Document Mapping Library
+Mongoose baglantisi app.js klasöründe yapıldı.
+Schema -> (iskelet)Database'e kaydedeceğimiz dökümanın iskeletidir.
+schema -> schematype,schemaoptions
+
+schematype options
+1. ve 2. sayfa gülben yazıcak
